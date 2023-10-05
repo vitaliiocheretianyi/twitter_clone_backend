@@ -8,7 +8,7 @@ interface IFollow {
 const followSchema = new mongoose.Schema({
   followerId: { type: mongoose.Types.ObjectId, ref: 'User', required: true },
   followingId: { type: mongoose.Types.ObjectId, ref: 'User', required: true }
-});
+}, { timestamps: true });
 
 const Follow = mongoose.model('Follow', followSchema);
 export { Follow };
